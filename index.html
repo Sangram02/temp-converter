@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Converter</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="./jquery.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Temprature Converter</div>
+        <div class="temp">
+            <div class="hell">
+                <div class="bell">
+                    <label for="">Degrees: </label>
+                    <br>
+                <input type="number" name="" id="l1">
+                </div>
+                <div class="dell">
+                    <label for="" id="">Type</label>
+                    <br>
+                <select name="" id="l2">
+                    <option value="0" id="">Farenheit</option>
+                    <option value="1" id="">Kelvin</option>
+                    <option value="2" id="">Rankine</option>
+                </select>
+                </div>
+            </div>
+            <div class="kell">
+                <label for="">Result</label>
+                <br>
+                <input type="number" name="" id="l3">
+            </div>
+            <br>
+            <br>
+            <button>Submit</button>
+        </div>
+        
+    </div>  
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var type = $("#l2").val();
+                if(type == "0"){
+                    var far = $("#l1").val()*(9/5)+32;
+                    $("#l3").val(far)
+                }
+                if(type == "1"){
+                    var far = Integer.parseInt($("#l1").val()) + 273.15;
+                    $("#l3").val(far)
+                }
+                if(type == "2"){
+                    var far = $("#l1").val()*(9/5)+491.67;
+                    $("#l3").val(far)
+                }
+            })
+        })
+    </script>
+</body>
+</html>
